@@ -29,9 +29,11 @@ namespace WebAPI.Controllers
             listaUsuarios.Where(n => n.Codigo == usuario.Codigo)
                          .Select(s =>
                          {
-                             s.Codigo = usuario.Codigo;
-                             s.Login = usuario.Login;
                              s.Nome = usuario.Nome;
+                             s.Sobrenome = usuario.Sobrenome;
+                             s.Email = usuario.Email;
+                             s.Phone = usuario.Phone;
+                             s.Birthday = usuario.Birthday;
 
                              return s;
 

@@ -1,33 +1,41 @@
-﻿namespace WebAPI.Models
+﻿using System;
+
+namespace WebAPI.Models
 {
     public class UsuarioModel
     {
 
-        private int codigo;
+        private int id;
         private string nome;
-        private string login;
+        private string sobrenome;
+        private string email;
+        private int phone;
+        private DateTime birthday;
 
         public UsuarioModel()
         {
         }
 
-        public UsuarioModel(int codigo, string nome, string login)
+        public UsuarioModel(int id, string nome, string sobrenome, string email, int phone, DateTime birthday)
         {
-            this.Codigo = codigo;
+            this.id = id;
             this.Nome = nome;
-            this.Login = login;
+            this.sobrenome = sobrenome;
+            this.email = email;
+            this.phone = phone;
+            this.birthday = birthday;
         }
 
         public int Codigo
         {
             get
             {
-                return codigo;
+                return id;
             }
 
             set
             {
-                codigo = value;
+                id = value;
             }
         }
 
@@ -44,16 +52,52 @@
             }
         }
 
-        public string Login
+        public string Sobrenome
         {
             get
             {
-                return login;
+                return sobrenome;
             }
 
             set
             {
-                login = value;
+                sobrenome = value;
+            }
+        }
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
+            }
+        }
+        public int Phone
+        {
+            get
+            {
+                return phone;
+            }
+
+            set
+            {
+                phone = value;
+            }
+        }
+        public DateTime Birthday
+        {
+            get
+            {
+                return birthday;
+            }
+
+            set
+            {
+                birthday = value;
             }
         }
 

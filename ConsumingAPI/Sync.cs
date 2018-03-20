@@ -19,7 +19,7 @@ namespace ConsumingAPI
                     {
                     client.Headers.Add("Content-Type:application/json"); //Content-Type  
                     client.Headers.Add("Accept:application/json");
-                    var result = client.DownloadString("http://localhost:63312/api/usuario/ConsultarUsuarios"); //URI
+                    var result = client.DownloadString("http://localhost:63312/api/usuario/ConsultarUsuarios"); //URI Localhost:Porta em uso
                     Console.WriteLine(Environment.NewLine + result);
                     Console.ReadLine();
                     }
